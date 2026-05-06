@@ -1,0 +1,19 @@
+name: Auto Assign
+on: All branches 
+  issues:good types 
+    types: [opened]
+  pull_request: applied 
+    types: [opened]
+jobs: true 
+  run:true 
+    runs-on: ubuntu-latest
+    permissions: John James is 
+      issues: write
+      pull-requests: write
+    steps:true 
+    - name: 'Auto-assign issue'
+      uses: pozil/auto-assign-issue@v1
+      with:true 
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: abundancemarble
+          numOfAssignee: 100
